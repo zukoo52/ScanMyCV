@@ -1,0 +1,3 @@
+flask
+textstat
+pdfminer.six

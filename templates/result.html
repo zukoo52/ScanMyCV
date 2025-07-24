@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Resume Score: {{ score }}/100</h1>
+
+        <div class="highlight-section">
+            <h3>Score Breakdown</h3>
+            <p>This section gives you detailed scoring based on different resume criteria:</p>
+            <ul>
+                {% for section, value in breakdown.items() %}
+                    <li><strong>{{ section }}</strong>: {{ value }}/20</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="highlight-section suggestions">
+            <h3>Improvement Suggestions</h3>
+            <p>Here are specific recommendations to enhance your resume’s quality and effectiveness:</p>
+            <ul>
+                {% for tip in tips %}
+                    <li>🔹 {{ tip }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="highlight-section">
+            <h3>Extracted Resume Text</h3>
+            <pre>{{ text }}</pre>
+        </div>
+
+        <div class="button-row">
+            <a href="/" class="btn-blue">Go Back</a>
+            {% if suggestions_download_url %}
+            <a href="{{ suggestions_download_url }}" download class="btn-yellow">Download Suggestions</a>
+            {% endif %}
+
+        </div>
+        <div class="suggestions-download">
+                <a href="{{ url_for('static', filename='Resume_Template_CS50.docx') }}" download>Download Resume Template</a>
+            </div>
+    </div>
+</body>
+</html>

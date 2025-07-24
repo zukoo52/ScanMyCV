@@ -1,0 +1,194 @@
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f4f6fc;
+    color: #333;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 300px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: linear-gradient(to right, #e7effd, #dee8ff);
+
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 10px;
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    color: #101d42;
+    margin-bottom: 0.3em;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    color: #425466;
+    margin-top: 0.5em;
+}
+
+.hero-colors span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.blue { background-color: #2563eb; }
+.lightblue { background-color: #60a5fa; }
+.orange { background-color: #fbbf24; }
+
+.hero-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.hero-image img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 12px;
+}
+
+/* Upload Section */
+.upload-box {
+    background-color: #fff;
+    padding: 30px;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.upload-box h2 {
+    color: #101d42;
+}
+
+input[type="file"] {
+    margin: 15px 0;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #1e40af;
+}
+
+.suggestions-download {
+    margin-top: 20px;
+}
+
+.suggestions-download a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #fbbf24;
+    color: #000;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* Result Page Styling */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Highlight Sections */
+.highlight-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #e7effd;
+    border-left: 6px solid #2563eb;
+    border-radius: 8px;
+}
+
+.highlight-section h3 {
+    margin-top: 0;
+    color: #101d42;
+}
+
+.highlight-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.highlight-section li {
+    background: #f9fbff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.highlight-section p {
+    color: #333;
+}
+
+/* Suggestions block specifically */
+.highlight-section.suggestions {
+    background-color: #fff7e6;
+    border-left-color: #fbbf24;
+}
+
+pre {
+    background-color: #f4f6fc;
+    padding: 15px;
+    border-radius: 6px;
+    overflow-x: auto;
+}
+
+/* Button group for navigation and downloads */
+.button-row {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.button-row a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn-blue {
+    background-color: #2563eb;
+    color: #fff;
+}
+
+.btn-blue:hover {
+    background-color: #1e40af;
+}
+
+.btn-yellow {
+    background-color: #fbbf24;
+    color: #000;
+}

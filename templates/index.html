@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ScanMyCV</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    </head>
+
+    <body>
+
+        <div class="hero">
+            <div class="hero-text">
+                <div class="hero-colors">
+                    <span class="blue"></span>
+                    <span class="lightblue"></span>
+                    <span class="orange"></span>
+                </div>
+                <h1>ScanMy<span style="color:#2563eb">CV</span></h1>
+                <p>Your personal resume reviewer — quick, insightful, and free.</p>
+                <p><strong>Created for CS50x</strong> | Analyze your resume instantly
+            </div>
+
+            <div class="hero-image">
+                <img src="{{ url_for('static', filename='Untitled design (6).gif') }}" alt="Illustration" class="image"
+                    style="max-width: 400px;">
+
+            </div>
+        </div>
+
+        <div class="upload-box">
+            <h2>Upload Your Resume</h2>
+            <p style="color: #425466; font-size: 0.95em; margin-top: -10px; margin-bottom: 20px;">
+                Accepted formats: <strong>.pdf, .docx, .txt</strong>. <br>
+                <span style="color: #d32f2f;">Please avoid uploading images or unsupported files.</span>
+            </p>
+            <form method="POST" enctype="multipart/form-data">
+                <input type="file" name="resume" accept=".pdf,.txt,.docx,.jpg,.jpeg,.png" required><br>
+                <button type="submit">Analyze</button>
+            </form>
+
+            {% if suggestions_download_url %}
+            <div class="suggestions-download">
+                <a href="{{ suggestions_download_url }}" download>Download Suggestions</a>
+            </div>
+            {% endif %}
+        </div>
+    </body>
+
+</html>
